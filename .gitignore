@@ -1,0 +1,8 @@
+
+/public/storage
+public/images
+public/public
+storage/public
+public/logs
+app/Http/Middleware/Cors.php
+

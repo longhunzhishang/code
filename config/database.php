@@ -1,0 +1,333 @@
+<?php
+
+return [
+
+    /*
+    |--------------------------------------------------------------------------
+    | PDO Fetch Style
+    |--------------------------------------------------------------------------
+    |
+    | By default, database results will be returned as instances of the PHP
+    | stdClass object; however, you may desire to retrieve records in an
+    | array format for simplicity. Here you can tweak the fetch style.
+    |
+    */
+
+    'fetch' => PDO::FETCH_CLASS,
+
+    /*
+    |--------------------------------------------------------------------------
+    | Default Database Connection Name
+    |--------------------------------------------------------------------------
+    |
+    | Here you may specify which of the database connections below you wish
+    | to use as your default connection for all database work. Of course
+    | you may use many connections at once using the Database library.
+    |
+    */
+
+    'default' => env('DB_CONNECTION', 'mysql'),
+
+    /*
+    |--------------------------------------------------------------------------
+    | Database Connections
+    |--------------------------------------------------------------------------
+    |
+    | Here are each of the database connections setup for your application.
+    | Of course, examples of configuring each database platform that is
+    | supported by Laravel is shown below to make development simple.
+    |
+    |
+    | All database work in Laravel is done through the PHP PDO facilities
+    | so make sure you have the driver for your particular database of
+    | choice installed on your machine before you begin development.
+    |
+    */
+
+    'connections' => [
+
+        'sqlite' => [
+            'driver' => 'sqlite',
+            'database' => env('DB_DATABASE', database_path('database.sqlite')),
+            'prefix' => '',
+        ],
+
+        'mysql' => [
+            'driver' => 'mysql',
+            'host' => env('DB_HOST', 'localhost'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+        'mysql_oc2018' => [
+            'driver' => 'mysql',
+            'host' => env('DB_OC2018_HOST', 'localhost'),
+            'port' => '3306',
+            'database' => env('DB_OC2018_DATABASE', 'oc2018'),
+            'username' => env('DB_OC2018_USERNAME', 'root'),
+            'password' => env('DB_OC2018_PASSWORD', ''),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+        'mysql_116' => [
+            'driver' => 'mysql',
+            'host' => '192.168.31.116',
+            'port' => '3306',
+            'database' => 'resultdb2',
+            'username' => 'root',
+            'password' => 'root',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+        'mysql_test' => [
+            'driver' => 'mysql',
+            'host' => 'localhost',
+            'port' => '3306',
+            'database' => 'test',
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+        'mysql_oc_true' => [
+            'driver' => 'mysql',
+            'host' => env('DB_OC_HOST', 'localhost'),
+            'port' => env('DB_OC_PORT', '3306'),
+            'database' => env('DB_OC_DATABASE', 'forge'),
+            'username' => env('DB_OC_USERNAME', 'forge'),
+            'password' => env('DB_OC_PASSWORD', ''),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => env('DB_OC_PREFIX', ''),
+            'strict' => false,
+            'engine' => null,
+        ],
+        'mysql_oc_center' => [
+            'driver' => 'mysql',
+            'host' => 'rm-bp1c5x1rhig246p88o.mysql.rds.aliyuncs.com',
+            'port' => '3306',
+            'database' => 'oc',
+            'username' => 'adbug',
+            'password' => '2YeoyszrQoUhzubO',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => 'oc_',
+            'strict' => false,
+            'engine' => null,
+        ],
+        'mysql_local_url' => [
+            'driver' => 'mysql',
+            'host' => 'localhost',
+            'port' => '3306',
+            'database' => 'urls',
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'strict' => false,
+            'engine' => null,
+        ],
+        'mysql_url' => [
+            'driver' => 'mysql',
+            'host' => env('DB_URL_HOST', 'localhost'),
+            'port' => env('DB_URL_PORT', '3306'),
+            'database' => env('DB_URL_DATABASE', 'urls'),
+            'username' => env('DB_URL_USERNAME', 'root'),
+            'password' => env('DB_URL_PASSWORD', ''),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => env('DB_OC_PREFIX', ''),
+            'strict' => false,
+            'engine' => null,
+        ],
+        'mysql_dtadbug_local' => [
+            'driver' => 'mysql',
+            'host' => 'localhost',
+            'port' => '3306',
+            'database' => 'dtadbug',
+            'username' => 'root',
+            'password' => '',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+        'mysql_url_true' => [
+            'driver' => 'mysql',
+            'host' => env('DB_URL_HOST', 'rm-bp1k260q03jqh5qg4o.mysql.rds.aliyuncs.com'),
+            'port' => env('DB_URL_PORT', '3306'),
+            'database' => env('DB_URL_DATABASE', 'urls'),
+            'username' => env('DB_URL_USERNAME', 'ooM10'),
+            'password' => env('DB_URL_PASSWORD', 'Y5djQBVpHPWYH9tZ'),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => env('DB_OC_PREFIX', ''),
+            'strict' => false,
+            'engine' => null,
+        ],
+        'mysql_dtadbug_true' => [
+            'driver' => 'mysql',
+            'host' => 'rm-bp1c5x1rhig246p88.mysql.rds.aliyuncs.com',
+            'port' => '3306',
+            'database' => 'dtadbug',
+            'username' => 'adbug',
+            'password' => '2YeoyszrQoUhzubO',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+        'mysql_adbug_local' => [
+            'driver' => 'mysql',
+            'host' => 'rm-bp1c5x1rhig246p88o.mysql.rds.aliyuncs.com',
+            'port' => '3306',
+            'database' => 'adbugnew',
+            'username' => 'adbug',
+            'password' => '2YeoyszrQoUhzubO',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+        'mysql_topmain_true' => [
+            'driver' => 'mysql',
+            'host' => 'rm-bp1c5x1rhig246p88.mysql.rds.aliyuncs.com',
+            'port' => '3306',
+            'database' => 'adbugnew',
+            'username' => 'adbug',
+            'password' => '2YeoyszrQoUhzubO',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+        // rm-bp1k260q03jqh5qg4o.mysql.rds.aliyuncs.com
+        'mysql_oc' => [
+            'driver' => 'mysql',
+            'host' => env('OC_HOST','192.168.1.24'),
+            'port' => env('DB_PORT', '3306'),
+            'database' => env('OC_DATABASE','oc_test'),
+            'username' => env('OC_ROOT','ooM10'),
+            'password' => env('OC_PASSWORD','Y5djQBVpHPWYH9tZ'),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
+        'mysql_adbug_mid' => [
+            'driver' => 'mysql',
+            // 'host' => '192.168.1.24',//120.27.210.246
+            'host'=>'120.27.210.246',
+            'port' => env('DB_PORT', '3306'),
+            'database' => 'adbug',
+            'username' => 'ooM10',
+            'password' => 'Y5djQBVpHPWYH9tZ',
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => true,
+            'engine' => null,
+        ],
+        'pgsql' => [
+            'driver' => 'pgsql',
+            'host' => env('DB_HOST', 'localhost'),
+            'port' => env('DB_PORT', '5432'),
+            'database' => env('DB_DATABASE', 'forge'),
+            'username' => env('DB_USERNAME', 'forge'),
+            'password' => env('DB_PASSWORD', ''),
+            'charset' => 'utf8',
+            'prefix' => '',
+            'schema' => 'public',
+        ],
+        'web_running_data' => [
+            'driver' => 'mysql',
+            'host' => env('DB_OC2018_HOST', 'localhost'),
+            'port' => '3306',
+            'database' => 'web_running_data',
+            'username' => env('DB_OC2018_USERNAME', 'root'),
+            'password' => env('DB_OC2018_PASSWORD', ''),
+            'charset' => 'utf8',
+            'collation' => 'utf8_unicode_ci',
+            'prefix' => '',
+            'strict' => false,
+            'engine' => null,
+        ],
+
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Migration Repository Table
+    |--------------------------------------------------------------------------
+    |
+    | This table keeps track of all the migrations that have already run for
+    | your application. Using this information, we can determine which of
+    | the migrations on disk haven't actually been run in the database.
+    |
+    */
+
+    'migrations' => 'migrations',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Redis Databases
+    |--------------------------------------------------------------------------
+    |
+    | Redis is an open source, fast, and advanced key-value store that also
+    | provides a richer set of commands than a typical key-value systems
+    | such as APC or Memcached. Laravel makes it easy to dig right in.
+    |
+    */
+
+    'redis' => [
+
+        'cluster' => false,
+
+        'default' => [
+            'host' => env('REDIS_HOST', 'localhost'),
+            'password' => env('REDIS_PASSWORD', null),
+            'port' => env('REDIS_PORT', 6379),
+            'database' => 1,
+        ],
+        'session' => [
+            'host' => env('REDIS_HOST', 'localhost'),
+            'password' => env('REDIS_PASSWORD', null),
+            'port' => env('REDIS_PORT', 6379),
+            'database' => 2,
+        ],
+        'cache' => [
+            'host' => env('REDIS_HOST', 'localhost'),
+            'password' => env('REDIS_PASSWORD', null),
+            'port' => env('REDIS_PORT', 6379),
+            'database' => 2,
+        ],
+        'read' => [
+            'host' => env('REDIS_READ_HOST', 'localhost'),
+            'password' => env('REDIS_READ_PASSWORD', null),
+            'port' => env('REDIS_READ_PORT', 6379),
+            'database' => 0,
+        ]
+
+    ],
+
+];
